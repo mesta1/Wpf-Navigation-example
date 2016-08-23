@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfNavigationExample.Views.Dialogs.EditTitle.EditTitleDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:dialogs="clr-namespace:WpfNavigationExample.Views.Dialogs"
+        xmlns:editTitle="clr-namespace:WpfNavigationExample.Views.Dialogs.EditTitle"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="DialogWindow"
+        Width="337"
+        Height="143"
+        d:DataContext="{d:DesignInstance editTitle:EditTitleDialogViewModel,
+                                         IsDesignTimeCreatable=True}"
+        mc:Ignorable="d">
+    <Grid>
+        <StackPanel>
+            <Label Content="Edit ViewModel title" />
+            <TextBox Text="{Binding Title}" />
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button Width="80"
+                        Margin="10"
+                        Command="{Binding ConfirmCommand}"
+                        Content="Ok" />
+                <Button Width="80"
+                        Margin="10"
+                        Click="btnCancel_Click"
+                        Content="Cancel" />
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

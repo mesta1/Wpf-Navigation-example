@@ -1,0 +1,18 @@
+﻿<Application x:Class="WpfNavigationExample.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:first="clr-namespace:WpfNavigationExample.Views.First"
+             xmlns:second1="clr-namespace:WpfNavigationExample.Views.Second"
+             xmlns:third="clr-namespace:WpfNavigationExample.Views.Third">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type first:FirstViewModel}">
+            <first:FirstView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type second1:SecondViewModel}">
+            <second1:SecondView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type third:ThirdViewModel}">
+            <third:ThirdView />
+        </DataTemplate>
+    </Application.Resources>
+</Application>

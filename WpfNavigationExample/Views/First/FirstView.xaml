@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="WpfNavigationExample.Views.First.FirstView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:first="clr-namespace:WpfNavigationExample.Views.First"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DataContext="{d:DesignInstance first:FirstViewModel,
+                                              IsDesignTimeCreatable=True}"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+    <Grid>
+        <StackPanel>
+            <Label Content="{Binding Name}" />
+            <Button Margin="10"
+                    Command="{Binding ShowDialogCommand}"
+                    Content="Edit title dialog" />
+            <Button Margin="10,0"
+                    Command="{Binding ShowSecondViewCommand}"
+                    Content="Show second view" />
+        </StackPanel>
+    </Grid>
+</UserControl>

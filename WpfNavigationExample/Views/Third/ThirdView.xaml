@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="WpfNavigationExample.Views.Third.ThirdView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:third="clr-namespace:WpfNavigationExample.Views.Third"
+             d:DataContext="{d:DesignInstance third:ThirdViewModel,
+                                              IsDesignTimeCreatable=True}"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+    <Grid>
+        <StackPanel>
+            <Label Content="{Binding Name}" />
+            <Button Margin="10"
+                    Command="{Binding ShowFirstViewCommand}"
+                    Content="Show first view" />
+        </StackPanel>
+    </Grid>
+</UserControl>
